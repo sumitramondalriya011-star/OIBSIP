@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="icon">🌡️</div>
+        <h1>Temperature Converter</h1>
+        <p class="subtitle">Convert temperatures quickly and easily</p>
+
+        <div class="form-group">
+            <label for="temperature">Enter Temperature</label>
+            <input
+                type="text"
+                id="temperature"
+                inputmode="decimal"
+                placeholder="e.g. 25"
+                autocomplete="off"
+                aria-describedby="error"
+            >
+            <p id="error" class="error" role="alert"></p>
+        </div>
+
+        <div class="form-group">
+            <label for="unit">Select Input Unit</label>
+            <select id="unit">
+                <option value="C">Celsius (°C)</option>
+                <option value="F">Fahrenheit (°F)</option>
+                <option value="K">Kelvin (K)</option>
+            </select>
+        </div>
+
+        <button id="convertBtn">Convert Temperature</button>
+
+        <div class="results" id="results" aria-live="polite">
+            <h2>Conversion Results</h2>
+
+            <div class="result-item">
+                <span>Celsius</span>
+                <strong id="celsius">-- °C</strong>
+            </div>
+
+            <div class="result-item">
+                <span>Fahrenheit</span>
+                <strong id="fahrenheit">-- °F</strong>
+            </div>
+
+            <div class="result-item">
+                <span>Kelvin</span>
+                <strong id="kelvin">-- K</strong>
+            </div>
+        </div>
+
+        <p class="footer">Built with HTML, CSS & JavaScript</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
